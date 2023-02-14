@@ -1,8 +1,10 @@
 export interface Employee {
   id: number;
-  name: string;
-  email: string;
-  jobTitle: string;
+  firstName: string;
+  lastName: string;
+  address: string;
+  dateOfBirth: string;
+  maritalStatus: string;
   phone: string;
   imageUrl: string;
   employeeCode: string;

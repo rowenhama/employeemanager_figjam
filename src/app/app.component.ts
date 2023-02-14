@@ -75,10 +75,10 @@ export class AppComponent implements OnInit {
     console.log(key);
     const results: Employee[] = [];
     for (const employee of this.employees) {
-      if (employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1
-      || employee.email.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      if (employee.firstName.toLowerCase().indexOf(key.toLowerCase()) !== -1
+      || employee.address.toLowerCase().indexOf(key.toLowerCase()) !== -1
       || employee.phone.toLowerCase().indexOf(key.toLowerCase()) !== -1
-      || employee.jobTitle.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
+      || employee.lastName.toLowerCase().indexOf(key.toLowerCase()) !== -1) {
         results.push(employee);
       }
     }
