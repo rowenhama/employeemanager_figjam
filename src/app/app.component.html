@@ -1,5 +1,5 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" style="color:white;">Employee Manager</a>
+<nav class="navbar navbar-expand-lg navbar-success bg-success">
+  <a class="navbar-brand" style="color:white;">Employee Details</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
   </button>
@@ -34,7 +34,7 @@
         </ul>
         <div class="card-body">
            <div class="float-right btn-group btn-group-sm">
-              <a (click)="onOpenModal(employee, 'edit')" class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+              <a (click)="onOpenModal(employee, 'edit')" class="btn btn-success tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
               <a (click)="onOpenModal(employee, 'delete')" class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
            </div>
         </div>
@@ -76,7 +76,7 @@
           </div>
           <div class="modal-footer">
              <button type="button" id="add-employee-form" class="btn btn-secondary" data-dismiss="modal">Close</button>
-             <button [disabled]="addForm.invalid" type="submit" class="btn btn-primary" >Save changes</button>
+             <button [disabled]="addForm.invalid" type="submit" class="btn btn-success" >Save changes</button>
           </div>
           </form>
        </div>
@@ -120,7 +120,7 @@
               </div>
               <div class="modal-footer">
                  <button type="button" id="" data-dismiss="modal" class="btn btn-secondary">Close</button>
-                 <button (click)="onUpdateEmloyee(editForm.value)" data-dismiss="modal" class="btn btn-primary" >Save changes</button>
+                 <button (click)="onUpdateEmloyee(editForm.value)" data-dismiss="modal" class="btn btn-success" >Save changes</button>
               </div>
            </form>
         </div>
