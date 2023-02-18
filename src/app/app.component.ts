@@ -3,6 +3,8 @@ import { Employee } from './employee';
 import { EmployeeService } from './employee.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
+import { SocialAuthService } from "@abacritt/angularx-social-login";
+import { SocialUser } from "@abacritt/angularx-social-login";
 
 @Component({
   selector: 'app-root',
@@ -14,10 +16,18 @@ export class AppComponent implements OnInit {
   public editEmployee: Employee;
   public deleteEmployee: Employee;
 
-  constructor(private employeeService: EmployeeService){}
+  user:any;
+  loggedIn:any;
+
+  constructor(private employeeService: EmployeeService,public authService: SocialAuthService){}
 
   ngOnInit() {
     this.getEmployees();
+    this.authService.authState.subscribe((user) => {
+      this.user = user;
+      this.loggedIn = (user != null);
+    });
+    console.log(this.user)
   }
 
   public getEmployees(): void {

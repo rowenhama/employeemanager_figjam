@@ -1,3 +1,8 @@
+
+<asl-google-signin-button *ngIf="!user" type="standard" size="large">Sign In with Google</asl-google-signin-button>
+
+<div *ngIf="user">
+
 <nav class="navbar navbar-expand-lg navbar-success bg-success">
   <a class="navbar-brand" style="color:white;">Employee Details</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
@@ -9,6 +14,11 @@
            <a class="nav-link" (click)="onOpenModal(null!, 'add')">Add Employee <span class="sr-only">(current)</span></a>
         </li>
      </ul>
+     <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+         <h4>{{ user.name }}</h4>
+      </li>
+   </ul>
      <form class="form-inline my-2 my-lg-0">
         <input type="search" (ngModelChange)="searchEmployees(key.value)" #key="ngModel" ngModel
          name="key" id="searchName" class="form-control mr-sm-2" placeholder="Search employees..." required>
@@ -157,7 +167,7 @@
            </button>
         </div>
         <div class="modal-body">
-           <p>Are you sure you want to delete employee {{deleteEmployee?.firstName}?</p>
+           <p>Are you sure you want to delete employee {{deleteEmployee?.firstName}}</p>
            <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
               <button (click)="onDeleteEmloyee(deleteEmployee?.id!)" class="btn btn-danger" data-dismiss="modal">Yes</button>
@@ -174,4 +184,6 @@
   <h4 class="alert-heading">NO EMPLOYEES!</h4>
   <p>No Employees were found.</p>
 </div>
+</div>
+
 </div>
