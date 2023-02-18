@@ -1,5 +1,23 @@
 
-<asl-google-signin-button *ngIf="!user" type="standard" size="large">Sign In with Google</asl-google-signin-button>
+<div class="container" *ngIf="!user">
+   <div class="row">
+     <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+       <div class="card border-0 shadow rounded-3 my-5">
+         <div class="card-body p-4 p-sm-5">
+           <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
+           <form>
+             <hr class="my-4">
+             <div class="d-grid mb-2">
+               <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
+                  <h4>Sign In with Google</h4><asl-google-signin-button type="standard" size="large">Sign In with Google</asl-google-signin-button>
+               </button>
+             </div>
+           </form>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
 
 <div *ngIf="user">
 
