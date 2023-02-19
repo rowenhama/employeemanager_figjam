@@ -12,6 +12,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 3. Run the command `npm install` to install all the necessary dependencies for this project
 
+-> For the following command to produce expected results, ensure your back-end is up and running
+
 Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 
